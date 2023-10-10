@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url(bg_image3.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.box{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    padding: 10px;
+    list-style: none;     
+}
+.navbar ul a{
+    color: #fff;
+    padding: 3px;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar ul a:hover{
+    background-color: brown;
+    cursor: pointer;
+
+}
+.box_2{
+    align-items: center;
+    justify-content: center;
+    margin-left: 40%;
+    margin-top: 5%;
+    height: 325px;
+    width: 350px;
+    position: relative;
+    box-shadow: 18px 18px 24px;
+    border-radius: 15px;
+    background-color: transparent;
+    overflow: hidden;
+}
+.box_2 h2{
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+    font-size: 2em;
+    margin-top: 20px;
+}
+.input_group .input_text{
+    border-style: none; 
+    padding: 5px; 
+    cursor: pointer;
+}
+.input_group{
+    padding: 5px;
+    margin-top: 10px;
+   
+}
+#user{
+    color: #fff;
+}
+#password{
+    color: #fff;
+}
+.links {
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 20%;
+    
+}
+.links a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.links a:hover{
+    color: crimson;
+}
+#login_btn{
+    padding: 5px;
+}
+#login_btn input{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+    margin-left: 35%;
+}
+#login_btn input:hover{
+    background-color: rgb(76, 129, 23);
+    color: #fff;
+}

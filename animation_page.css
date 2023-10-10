@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(bg_image.jpg);
+    background-size: cover;
+    background-size: 100vh 100vh;
+    box-sizing: border-box;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+.box{
+    height: 400px;
+    width: 400px;
+    background: rgba(42, 42, 42, 0.837);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+.box form{
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 10px;
+    z-index:2;
+    display: flex;
+    flex-direction: column;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    height: 350px;
+    top: -30%;
+    bottom: -30%;
+    width: 250px;
+    z-index: 1;
+    border-radius: 10px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    animation: rotate 6s linear infinite;
+    transform-origin: bottom right;
+}
+.box::after{
+    content: "";
+    position: absolute;
+    height: 350px;
+    top: -30%;
+    bottom: -30%;
+    width: 250px;
+    z-index: 1;
+    border-radius: 10px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    animation: rotate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: -3s;
+}
+.borderline{
+    position:absolute;
+    top: 0;
+    inset: 0;
+}
+.borderline::before{
+    content: "";
+    position: absolute;
+    height: 350px;
+    top: -30%;
+    bottom: -30%;
+    width: 250px;
+    z-index: 1;
+    border-radius: 10px;
+    background: linear-gradient(0deg,transparent,transparent,#ea2571,#ea2571,#ea2571);
+    animation: rotate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: -1.5s;
+
+}
+.borderline::after{
+    content: "";
+    position: absolute;
+    height: 350px;
+    top: -30%;
+    bottom: -30%;
+    width: 250px;
+    z-index: 1;
+    border-radius: 10px;
+    background: linear-gradient(0deg,transparent,transparent,#ea2571,#ea2571,#ea2571);
+    animation: rotate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: -4.5s;
+
+}
+    
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box form h2{
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+.box form .input_box{
+    width: 250px;
+    position: relative;
+    margin-top: 35px;
+}
+.box form .input_box input{
+    position: relative;
+    width: 100%;
+    outline: none;
+    border:none;
+    box-shadow: none;
+    background: transparent;
+    font-size: 1em;
+    letter-spacing: 0.5em;
+    transition: 0.5s;
+
+}
+.box form .input_box span{
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    transition: 0.5s;
+
+}
+.box form .input_box input:valid ~ span,
+.box form .input_box input:focus ~ span
+{
+    color: #fff;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+.box form .input_box i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.box form .input_box input:valid ~ i,
+.box form .input_box input:focus ~ i
+{
+    height: 30px;
+}
+.box form .links{
+    display:flex;
+    justify-content: space-between;
+}
+.box form .links a{
+    margin: 10px 0;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+.box form .links a:hover,
+.box form .links a:nth-child(2)
+{
+    color: #fff;
+
+}
+.box form .login input[type="submit"]
+{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background:#fffcfc;
+    cursor: pointer;
+    font-size: 0.9em;
+    width: 100px;
+    margin-top: 10px;
+}
+.box form .login input[type="submit"]:active
+{
+    opacity: 0.8;
+
+}
+
+#signup{
+    border: solid 1px #fff;
+    padding: 2px;
+}
+#signup:hover {
+    background-color: #bd0808;
+
+}
+
+#login_btn:hover{
+    background-color: rgb(13, 13, 138);
+    color: #fff;
+    font-size: large;
+}
